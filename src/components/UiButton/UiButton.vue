@@ -68,6 +68,13 @@ const props = withDefaults(defineProps<IProps>(), {
     color: var(--color-gray);
     background-color: var(--color-gray-darkest);
   }
+
+  &[data-layout='secondary']:disabled{
+    border: 2px solid var(--color-gray-light);
+    color: var(--color-gray-light);
+    background-color: var(--color-gray-dark);
+    cursor: not-allowed;
+  }
 }
 
 

@@ -46,5 +46,14 @@ height: 40px;
     &:focus::placeholder{
         visibility: hidden;
     }
+
+    &:disabled{
+        cursor: not-allowed;
+        border-color: var(--color-gray);
+        
+        &::placeholder{
+        color: var(--color-gray)
+        }
+    }
 }
 </style>
