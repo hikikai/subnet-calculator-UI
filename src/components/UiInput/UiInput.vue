@@ -10,10 +10,15 @@
 </template>
 
 <script setup lang="ts">
+
 interface IProps{
     modelValue: string;
     isDisabled?: boolean;
     placeholder: string;
+}
+
+interface IEmit {
+  (e: 'update:modelValue', value: string): void; //Сам emit update:ModelValue, возвращает значение string 
 }
 
 const props = withDefaults(defineProps<IProps>(), {
@@ -21,9 +26,8 @@ const props = withDefaults(defineProps<IProps>(), {
     modelValue: '',
 });
 
-const emit = defineEmits<{                 //Сам emit update:ModelValue, возвращает значение string 
-    'update:modelValue': [value: string]
-}>();
+const emit = defineEmits<IEmit>();
+
 </script>
 
 <style module lang="scss">
