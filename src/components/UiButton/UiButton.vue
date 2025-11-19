@@ -18,6 +18,7 @@ const props = withDefaults(defineProps<IProps>(), {
 </script>
 
 <style module lang="scss">
+
 .button {
   position: relative;
   display: inline-flex;
@@ -30,12 +31,44 @@ const props = withDefaults(defineProps<IProps>(), {
   line-height: 1.5;
   color: var(--color-white);
   background: var(--color-primary);
+  border: 2px solid var(--color-black);
   border-radius: 16px;
+  cursor: pointer;
 
   &[data-layout='secondary'] {
+    border: 2px solid var(--color-gray-light);
     color: var(--color-primary);
-    background-color: var(--color-transparent);
-    border-color: var(--color-primary);
+    background-color: var(--color-gray);
+  }
+
+  &:hover:not(:disabled){
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-gray-dark);
+  }
+
+  &:disabled{
+    border: 2px solid var(--color-gray-light);
+    color: var(--color-gray-light);
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+  }
+  
+  &:active:not(:disabled){
+    color: var(--color-gray);
+    background-color: var(--color-gray-darker);
+  }
+
+  &[data-layout='secondary']:hover:not(:disabled){
+  border: 2px solid var(--color-gray-light);
+  background-color: var(--color-gray-dark);
+  color: var(--color-gray-light)
+  }
+
+  &[data-layout='secondary']:active:not(:disabled){
+    color: var(--color-gray);
+    background-color: var(--color-gray-darkest);
   }
 }
+
+
 </style>
