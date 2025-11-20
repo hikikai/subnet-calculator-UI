@@ -7,7 +7,7 @@ import { html } from '../../helpers';
 const meta: Meta<typeof UiField> = {
   component: UiField,
   args: {
-    label: 'E-mail'
+    label: 'IP'
   },
 };
 
@@ -18,7 +18,7 @@ export const Primary: StoryObj<typeof UiField> = {
     components: { UiField, UiInput },
     setup: () => ({ args }),
     template: html`<UiField v-bind="args">
-                    <UiInput placeholder="Введите Email" />
+                    <UiInput placeholder="Введите IP" />
                     </UiField>
     `,
   }),

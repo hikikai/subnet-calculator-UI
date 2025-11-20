@@ -6,7 +6,7 @@ import { html } from '../../helpers';
 const meta: Meta<typeof UiSelect> = {
   component: UiSelect,
   args: {
-    options: ['12341234', '123412341234', '234123421342134'],
+    options: ['0.0.0.0', '128.0.0.0', '255.255.255.255'],
     modelValue: ''
   },
 };
